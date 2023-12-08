@@ -1,13 +1,10 @@
-
 directions = []
 nodes = {}
-# lines = []
 with open('../../../inputs/08', 'r') as f:
     i = 0
     for line in f:
         if i == 0:
             directions = line.strip()
-        # directions = list(l)
         if i > 1:
             line = line.split('=')
             nodes[line[0].strip()] = line[1].strip().replace('(', '').replace(')', '').replace(' ', '').split(',')
